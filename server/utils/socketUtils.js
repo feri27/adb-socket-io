@@ -14,28 +14,6 @@ exports.connection = (io) => {
   io.on("connection", (socket) => {
     console.log("A user is connected");
 
-    // socket.on("message", (message) => {
-
-    //   adbHelper = new ADBHelper.ADBHelper('adb');
-
-    //   adbHelper.getDevices((adbDevicesResult) => {
-
-    //     if (adbDevicesResult.code != 0) {
-    //       socket.emit("message", 'Error: ' + adbDevicesResult.stderr);
-    //     }
-
-    //     let devices = adbDevicesResult.devices;
-    //     if (devices.length == 0) {
-    //       socket.emit("message", 'No devices found.');
-    //     } else {
-    //       for (const device of devices) {
-    //         socket.emit("message", device.id);
-
-    //       }
-    //     }
-    //   });
-    // });
-
     socket.on("data", (message) => {
 
       var array = [];
